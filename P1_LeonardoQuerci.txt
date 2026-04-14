@@ -1,0 +1,23 @@
+link do repositorio git = https://github.com/LeonardoQuerci/P1_LeonardoQuerciPradoHernandes.git
+
+*****************PARTE 3*****************
+docker run --rm -p 8080:80 p1_leonardoquerci
+
+*****************PARTE 4*****************
+CRIEI O ARQUIVO Dockerfile e coloquei as seguintes informações
+FROM nginx:alpine 
+COPY . /usr/share/nginx/html
+EXPOSE 80
+
+Agora no cmd coloquei 
+docker build -t p1_leonardoquerci .
+docker run --rm -p 8080:80 p1_leonardoquerci
+
+Esqueci o comando para acessar na web o index.html mas era algo como:
+localhost/80 ou localhost/8080:80
+
+*****************PARTE 5*****************
+Por que o uso de Docker resolve o problema: 
+“Funciona na minha máquina, mas não no servidor”?
+
+Porque quando a imagem é baixada na máquina ela ja carrega todos os arquivos que é necessário para rodar, ou seja a pessoa que está baixando a imagem não precisa se preocupar com versão da linguagem ou algo do tipo, é necessário apenas rodar o container da imagem e ser feliz. 
