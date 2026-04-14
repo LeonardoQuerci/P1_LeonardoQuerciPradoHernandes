@@ -1,7 +1,7 @@
 link do repositorio git = https://github.com/LeonardoQuerci/P1_LeonardoQuerciPradoHernandes.git
 
 *****************PARTE 3*****************
-docker run --rm -p 8080:80 p1_leonardoquerci
+docker run --name P1_LeonardoQuerci -d -p 8080:80 nginx
 
 *****************PARTE 4*****************
 CRIEI O ARQUIVO Dockerfile e coloquei as seguintes informações
